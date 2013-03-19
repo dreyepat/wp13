@@ -5,11 +5,11 @@ one:
   description: MyText
   price: 9.99
   image_url: MyString
-  available: false
+  available: true
 
 two:
   title: MyString
   description: MyText
-  price: 9.99
+  price: 25.99
   image_url: MyString
   available: false
