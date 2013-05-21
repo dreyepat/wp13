@@ -1,9 +1,9 @@
 <% if notice %>
 <p id="notice"><%= notice %></p>
 <% end %>
-<h2>Your Cart</h2>
+<h2>Ihr Warenkorb</h2>
 <table>
-  <% @cart.line_items.each do |item| %>
+  <% render(@cart.line_items) %>
     <tr>
       <td><%= item.quantity %>&times;</td>
       <td><%= item.product.title %></td>

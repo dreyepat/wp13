@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Books Online Store</title>
-  <%= stylesheet_link_tag    "application", media: "all" %><!-- <label id="code.slt"/> -->
-  <%= javascript_include_tag "application" %><!-- <label id="code.jlt"/> -->
-  <%= csrf_meta_tags %><!-- <label id="code.csrf"/> -->
+  <title>Webshop</title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
 </head>
 <body class="<%= controller.controller_name %>">
   <div id="banner">
     <%= image_tag("logo.png") %>
-    <%= @page_title || "Pragmatic Bookshelf" %><!-- <label id="code.depot.e.title"/> -->
+    <%= @page_title || "Pragmatic Bookshelf" %>
   </div>
   <div id="columns">
     <div id="side">
+	  <div id="cart">
+	  <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+	    <%= render @cart %>
+	  <% end %>
+	  </div>
+	  
       <ul>
         <li><a href="http://shielded-spire-7447.herokuapp.com/">Home</a></li>
         <li><a href="http://shielded-spire-7447.herokuapp.com/faq">Questions</a></li>
