@@ -8,5 +8,6 @@
   </tr>
 </table>
 
+<%= button_to "zur Kasse", new_order_path, method: :get %>
 <%= button_to 'Warenkorb leeren', cart, method: :delete,
     data: { confirm: 'Sicher?' } %>

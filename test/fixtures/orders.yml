@@ -1,0 +1,14 @@
+# Read about fixtures at 
+# http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: Patrizia Dreyer
+  address: MyText
+  email: patrizia@dreyer.ch
+  pay_type: Rechnung
+
+two:
+  name: MyString
+  address: MyText
+  email: MyString
+  pay_type: MyString
